@@ -9,6 +9,7 @@ bias3= 0.4
 output = [inputs[0]*weights1[0] + inputs[1]*weights2[1] + inputs[2]*weights3[2] + bias1,
           inputs[0]*weights1[0] + inputs[1]*weights2[1] + inputs[2]*weights3[2] + bias2,
           inputs[0]*weights1[0] + inputs[1]*weights2[1] + inputs[2]*weights3[2] + bias3]
+
 output
 
 output = [-5.52, -4.52, -8.12]
