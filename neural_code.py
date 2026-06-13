@@ -244,7 +244,75 @@ output = '''[[ 1.07581312 10.39835225  2.44624108  3.1821498   1.88510534]
           [19.06833489 -8.81538128]]'''
 
 
+'''!pip install nnfs
+from nnfs.datasets import spiral_data
+import numpy as np
+import nnfs
+nnfs.init()
+import matplotlib.pyplot as plt
+import random 
+'''
+X, y =spiral_data(samples=100, classes=3)
 
+plt.scatter(X[:,0], X[:,0])
+plt.show()
+
+plt.scatter([X[:,0]], X[:,1], c=y, cmap='brg')
+plt.show()
+
+
+class Layer_Dense:
+# Initialize weights and biases
+  def __init__(self, inputs):
+    pass # using pass statement as aplaceholder
+
+# Forward pass
+def forward(self, inputs):
+  # Calculate output values from inputs, weights and biases
+  pass # using pass statement as a placeholder
+
+  # Layer initialization
+  def __init__(self, n__inputs, n_neurons):
+    self.weights = 0.01 * np.random.randn(n_inputs, n_neurons)
+    self.biases = np.zeros((1, n_neurons))
+print(np.random.randn(2,5))
+print(np.zeros((2,4)))
+
+output: '''[[-1.048553   -1.420018   -1.7062702   1.9507754  -0.5096522 ]
+            [-0.4380743  -1.2527953   0.7774904  -1.6138978  -0.21274029]]
+            [[0. 0. 0. 0.]
+            [0. 0. 0. 0.]]'''
+
+n_inputs = 2
+n_neurons = 4
+
+weights = 0.01 * np.random.randn(n_inputs, n_neurons)
+biases = np.zeros((1, n_neurons))
+print(weights)
+print(biases)
+
+output: '''[[-0.00895467  0.00386903 -0.00510805 -0.01180632]
+           [-0.00028182  0.00428332  0.00066517  0.00302472]]
+           [[0. 0. 0. 0.]]'''
+
+class Layer_Dense:
+  def __init__(self, n_inputs, n_neurons):
+    self.weights = 0.01 * np.random.randn(n_inputs, n_neurons)
+    self.biases = np.zeros((1, n_neurons))
+
+  def forward (self, inputs):
+    self.output = np.dot(inputs, self.weights) + self.biases
+
+X , y = spiral_data(samples=100, classes=3)
+dense1 = Layer_Dense(2,3)
+dense1.forward(X)
+print(dense1.output[:5])
+
+output: '''[[ 0.0000000e+00  0.0000000e+00  0.0000000e+00]
+            [ 9.9049321e-05 -2.1095922e-04  3.7016194e-05]
+            [ 2.0713788e-04 -4.1655917e-04  7.5199823e-05]
+            [ 3.1089142e-04 -6.2469585e-04  1.1282058e-04]
+            [ 3.7189163e-04 -8.5043209e-04  1.4422365e-04]]'''
 
 
 
